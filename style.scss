@@ -1,21 +1,14 @@
-#wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 .people {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 200px 200px;
+  grid-column-gap: 30px;
+  justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
 
   position: relative;
 
-  margin-top: 30px;
-
-  box-sizing: border-box; 
-  width: 440px;
+  padding: 30px 0;
 }
 
 .person {
@@ -56,6 +49,11 @@
     border-radius: 50%;
   }
 
+  &__photo-img:hover &__photo-rank{
+    right: 12px;
+    top: 100px;
+  }
+
   &__details-name {
     display: flex;
     justify-content: center;
@@ -65,20 +63,19 @@
     font-family: Arial;
     font-size: 20px;
     line-height: 23px;
-  /* identical to box height */
-  
     text-align: center;
   
     color: #2F4F4F;
   }
-
+  
   &__details-extra {
     display: none;
   }
 }
 
+
 @media (min-width: 1000px) {
   .people {
-    width: 890px;
+    grid-template-columns: 200px 200px 200px 200px;
   }
 }
