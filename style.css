@@ -1,0 +1,66 @@
+#wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.people {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  margin-top: 30px;
+  box-sizing: border-box;
+  width: 440px;
+}
+
+.person__photo {
+  position: relative;
+}
+.person__photo-img {
+  box-sizing: border-box;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  transition: all 1s;
+}
+.person__photo-img:hover {
+  width: 240px;
+  height: 240px;
+  border-radius: 25%;
+}
+.person__photo-rank {
+  position: absolute;
+  text-align: center;
+  line-height: 32px;
+  right: 10px;
+  top: 84px;
+  width: 32px;
+  height: 32px;
+  color: #900512;
+  background: white;
+  border-radius: 50%;
+}
+.person__details-name {
+  display: flex;
+  justify-content: center;
+  padding: 8px 0 10px;
+  font-family: Arial;
+  font-size: 20px;
+  line-height: 23px;
+  /* identical to box height */
+  text-align: center;
+  color: #2F4F4F;
+}
+.person__details-extra {
+  display: none;
+}
+
+@media (min-width: 1000px) {
+  .people {
+    width: 890px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
