@@ -15,7 +15,130 @@
   width: 200px;
   height: 271px;
 
-  position: relative;
+  position: relative;.people {
+    display: grid;
+    grid-template-columns: 200px 200px;
+    grid-column-gap: 30px;
+    justify-content: center;
+    align-items: center;
+  
+    position: relative;
+  
+    padding: 30px 0;
+  }
+  
+  .person {
+    box-sizing: border-box;
+    width: 200px;
+    height: 271px;
+  
+    position: relative;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    place-self: center;
+  
+    transition: transform 1s;
+  
+    &__photo {
+      position: relative;
+    }
+  
+    &__photo-img {
+      box-sizing: border-box;
+      width: 200px;
+      height: 200px;
+  
+      border-radius: 50%;
+  
+      transition: all 1s;
+    }
+  
+    &__photo-rank {
+      position: absolute;
+      text-align: center;
+      line-height: 32px;
+    
+      right: 10px;
+      top: 84px;
+    
+      width: 32px;
+      height: 32px;
+    
+      color: #900512;
+      background: white;
+      border-radius: 50%;
+    }
+  
+    &__details-name {
+      display: flex;
+      justify-content: center;
+    
+      padding: 8px 0 10px;
+    
+      font-family: Arial;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 23px;
+      
+      
+      text-align: center;
+    
+      color: #2F4F4F;
+    }
+    
+    &__details-extra {
+      display: none;
+    }
+  }
+  
+  @media (min-width: 1000px) {
+    .people {
+      grid-template-columns: 200px 200px 200px 200px;
+    }
+  }
+  
+  
+  .person:hover {
+    box-sizing: border-box;
+    width: 220px;
+    height: 287px;
+    padding-top: 8px;
+  
+    background-color: #eee;
+    border-radius: 10px;
+  
+    z-index: 1;
+  
+    transform: scale(1.2);
+  }
+  
+  .person:hover .person__photo-img {
+    border-radius: 25%;
+  }
+  
+  .person:hover .person__details-extra {
+    display: block;
+  
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21px;
+    color: #000;
+  }
+  
+  .person:hover .sport:after {
+    content: ",";
+  }
+  
+  .person:hover .pay:before {
+    content: "$";
+  }
+  
+  .person:hover .pay:after {
+    content: "M";
+  }
 
   display: flex;
   flex-direction: column;
